@@ -1,0 +1,231 @@
+.container{
+    width : 60%;
+    height : 500px;
+    padding : 10px;
+    border : 1px solid black;
+    position: absolute;
+    top : 5%;
+    left : 20%;
+    border-radius: 5px;
+    background : rgb(165, 90, 77);
+    transform: translateY(10%);
+    opacity: 0;
+    box-shadow: 10px 10px 8px #282222;
+    animation : slideUp 0.6s ease-out forwards;
+}
+
+
+.backgroundTransition{
+    background : rgb(165, 90, 77);
+    animation : colorSlide 10s ease-out infinite;
+    
+}
+
+@keyframes colorSlide {
+    0%{
+        background : rgb(165, 90, 77);
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    25%{
+        background : rgb(117, 165, 77);
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    50%{
+        background : rgb(77, 165, 153);
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    75%{
+        background : rgb(165, 77, 165);
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100%{
+        background: rgb(165, 90, 77);
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slideUp{
+    0%{
+        transform: translateY(10%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+.inputRangeContainer{
+    width : 100%;
+    text-align: center;
+    margin-top : 20px;
+    position: relative;
+}
+
+.inputRangeContainer .slider{
+   -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 60%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    border-radius: 10px;
+    margin:auto
+}
+
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #363232; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #363232; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+
+  .indicator{
+    font-size:22px;
+    position: absolute;
+    top: -15%;
+  }
+  .leftIndicator{
+    left : 15%;
+  }
+  .rightIndicator{
+    right : 15%;
+  }
+  
+
+  .rangeNumbers{
+    font-weight: bolder;
+    color : white;
+    font-size:12px;
+    position: absolute;
+    display: inline-block;
+    border-radius: 50%;
+    height : 17px;
+    width:17px;
+    text-align: center;
+    background : rgb(37, 36, 36)
+  }
+
+  .low{
+    top: 110%;
+    left: 20%;
+  }
+
+  .mid{
+    top : 110%;
+    left : 46%;
+  }
+
+  .high {
+    top : 110%;
+    right : 20%;
+  }
+
+  .exampleThumb{
+    width:25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: black;
+  }
+
+  .exampleThumb:hover{
+    cursor : pointer;
+  }
+
+  .showSelectedRange{
+    width : 100%;
+    text-align: center;
+    margin-top : 30px;
+    font-weight: bolder;
+    font-size: 26px;
+    color:rgb(100, 26, 26)
+  }
+
+  .listContainer{
+    width:700px;
+    height : 57px;
+    padding : 2px;
+    background :white;
+    margin : 50px auto;
+    padding:5px;
+    overflow: hidden;
+  }
+
+  .buttonContainer{
+    width : 700px;
+    margin : auto;
+    text-align: center;
+  }
+
+  .buttonContainer button{
+    padding: 10px 30px;
+    border-radius: 100px;
+    border:none;
+    font-weight: bolder;
+    background : purple;
+    color : white;
+    font-size:20px
+  }
+
+  .buttonContainer button:hover{
+    cursor: pointer;
+  }
+
+  .pending h2{
+    text-align: center;
+  }
+
+  .snackbar{
+    background : black;
+    width : 300px;
+    position : absolute;
+    bottom : 10px;
+    color : white;
+    text-align: center;
+    font-weight: bolder;
+    padding: 20px 10px;
+    opacity: 0.8;
+    left  : 30%;
+    transform: translateY(0);
+    animation : floatPop 2s ease-out infinite
+  }
+
+  @keyframes floatPop{
+    0%{
+      transform: translateY(0);
+    }
+    25%{
+      transform: translateY(-10%);
+    }
+    50%{
+      transform: translateY(10%);
+    }
+    75%{
+      transform: translateY(-10%);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
